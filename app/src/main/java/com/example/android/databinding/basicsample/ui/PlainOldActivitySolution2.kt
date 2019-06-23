@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.databinding.basicsample.ui
+/** package com.example.android.databinding.basicsample.ui
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -51,7 +51,7 @@ class PlainOldActivitySolution2 : AppCompatActivity() {
         binding.name = "Ada"
         binding.lastName = "Lovelace"
 
-        // TODO: Explicitly setting initial values is a bad pattern. We'll fix that later on.
+
         updateLikes()
     }
 
@@ -107,3 +107,4 @@ class PlainOldActivitySolution2 : AppCompatActivity() {
         }
     }
 }
+*/

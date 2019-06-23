@@ -12,7 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 
 package com.example.android.databinding.basicsample.ui
 
@@ -33,9 +34,11 @@ import com.example.android.databinding.basicsample.data.Popularity
 import com.example.android.databinding.basicsample.data.SimpleViewModel
 import com.example.android.databinding.basicsample.databinding.PlainActivitySolution3Binding
 
+*/
 /**
  * Third version of the Activity in the codelab.
- */
+ *//*
+
 class PlainOldActivitySolution3 : AppCompatActivity() {
 
     // Obtain ViewModel from ViewModelProviders
@@ -49,16 +52,17 @@ class PlainOldActivitySolution3 : AppCompatActivity() {
 
         binding.viewmodel = viewModel
 
-        // TODO: Explicitly setting initial values is a bad pattern. We'll fix that.
         updateLikes()
     }
 
-    /**
+    */
+/**
      * This method has many problems:
      * - It's calling findViewById multiple times
      * - It has untestable logic
      * - It's updating two views when called even if they're not changing
-     */
+     *//*
+
     private fun updateLikes() {
         findViewById<TextView>(R.id.likes).text = viewModel.likes.toString()
         findViewById<ProgressBar>(R.id.progressBar).progress =
@@ -96,3 +100,4 @@ class PlainOldActivitySolution3 : AppCompatActivity() {
         }
     }
 }
+*/
