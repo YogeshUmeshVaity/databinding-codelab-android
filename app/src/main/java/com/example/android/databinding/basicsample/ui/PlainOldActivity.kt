@@ -20,7 +20,6 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -48,19 +47,9 @@ class PlainOldActivity : AppCompatActivity() {
         val binding: PlainActivityBinding =
                 DataBindingUtil.setContentView(this, R.layout.plain_activity)
 
-        binding.name = "Sandy"
-        binding.lastName = "ydsan"
+        binding.viewmodel = viewModel
 
         // TODO: Explicitly setting initial values is a bad pattern. We'll fix that later on.
-        updateLikes()
-    }
-
-    /**
-     * This method is triggered by the `android:onclick` attribute in the layout. It puts business
-     * logic in the activity, which is not ideal. We should do something about that.
-     */
-    fun onLike(view: View) {
-        viewModel.onLike()
         updateLikes()
     }
 
