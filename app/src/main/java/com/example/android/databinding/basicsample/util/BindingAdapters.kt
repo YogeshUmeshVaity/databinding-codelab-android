@@ -77,6 +77,12 @@ fun hideIfZero(view: View, number: Int) {
     view.visibility = if (number == 0) View.GONE else View.VISIBLE
 }
 
+@BindingAdapter("android:progressTint")
+fun progressTint(progressBar: ProgressBar, popularity: Popularity) {
+    val color = getAssociatedColor(popularity, progressBar.context)
+    progressBar.progressDrawable.setColorFilter(color, android.graphics.PorterDuff.Mode.SRC_IN)
+}
+
 private fun getAssociatedColor(popularity: Popularity, context: Context): Int {
     return when (popularity) {
         Popularity.NORMAL -> context.theme.obtainStyledAttributes(
