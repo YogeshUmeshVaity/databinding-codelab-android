@@ -83,6 +83,12 @@ fun progressTint(progressBar: ProgressBar, popularity: Popularity) {
     progressBar.progressDrawable.setColorFilter(color, android.graphics.PorterDuff.Mode.SRC_IN)
 }
 
+@BindingAdapter("android:popularityImage")
+fun popularityImage(imageView: ImageView, popularity: Popularity) {
+    val image = getDrawablePopularity(popularity, imageView.context)
+    imageView.setImageDrawable(image)
+}
+
 private fun getAssociatedColor(popularity: Popularity, context: Context): Int {
     return when (popularity) {
         Popularity.NORMAL -> context.theme.obtainStyledAttributes(
